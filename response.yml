@@ -1,5 +1,5 @@
 ---
-:access_token: !ruby/object:HTTP::Response
+:airbnb_review: !ruby/object:HTTP::Response
   version: '1.1'
   uri: !ruby/object:HTTP::URI
     uri: !ruby/object:Addressable::URI
@@ -31,7 +31,7 @@
         http:; font-src ''self'' data: *.muscache.com fonts.gstatic.com use.typekit.net;
         frame-src *; img-src ''self'' https: http: data:; media-src ''self'' https:;
         object-src ''self'' https:; script-src ''self'' https: ''unsafe-eval'' ''unsafe-inline''
-        http:; style-src ''self'' https: ''unsafe-inline'' http:; report-uri /tracking/csp?action=index&controller=v2&req_uuid=1615b3a2-4728-4e01-be02-645a97d24e7b&version=0fbbc555b8427a1e0fee885d21a63d6be1a71dbf;'
+        http:; style-src ''self'' https: ''unsafe-inline'' http:; report-uri /tracking/csp?action=index&controller=v2&req_uuid=39b163af-6219-4b1a-81e9-bfe0476a90ce&version=e4ca4162c80d37b44d0c7424d8f526d1b762b0f6;'
     - - X-Content-Type-Options
       - nosniff
     - - X-Xss-Protection
@@ -47,7 +47,7 @@
     - - Strict-Transport-Security
       - max-age=10886400; includeSubdomains
     - - Date
-      - Fri, 14 Oct 2016 01:04:38 GMT
+      - Fri, 14 Oct 2016 02:00:33 GMT
     - - Content-Length
       - '24604'
     - - Connection
@@ -181,4 +181,82 @@
       Camp Richardson (our favorite spot), and away from the crowds. It has all the
       amenities you need, and the hot tub is a perfect way to end any night. Thank
       you, Sabrina! Can''t wait to come back. ","created_at":"2016-07-03T10:18:22Z","id":83518701,"listing_id":2056659,"recipient_id":10457593}]}'
+    encoding: utf-8
+:movie: !ruby/object:HTTP::Response
+  version: '1.1'
+  uri: !ruby/object:HTTP::URI
+    uri: !ruby/object:Addressable::URI
+      validation_deferred: false
+      scheme: http
+      host: www.omdbapi.com
+      path: "/"
+      authority: www.omdbapi.com
+      uri_string: http://www.omdbapi.com/?t=star+wars&y=&plot=short&r=json
+      query: t=star+wars&y=&plot=short&r=json
+      password: 
+      user: 
+      port: 
+  status: !ruby/marshalable:HTTP::Response::Status
+    :__v2__:
+    - :@code
+    ? - 200
+    : 200
+  headers: !ruby/object:HTTP::Headers
+    pile:
+    - - Date
+      - Fri, 14 Oct 2016 02:00:33 GMT
+    - - Content-Type
+      - application/json; charset=utf-8
+    - - Content-Length
+      - '542'
+    - - Connection
+      - close
+    - - Set-Cookie
+      - __cfduid=d4a494401acc37a0d25ccde7c6543e5021476410433; expires=Sat, 14-Oct-17
+        02:00:33 GMT; path=/; domain=.omdbapi.com; HttpOnly
+    - - Cache-Control
+      - public, max-age=86400
+    - - Expires
+      - Sat, 15 Oct 2016 02:00:33 GMT
+    - - Last-Modified
+      - Thu, 13 Oct 2016 16:01:20 GMT
+    - - Vary
+      - "*"
+    - - X-Aspnet-Version
+      - 4.0.30319
+    - - X-Powered-By
+      - ASP.NET
+    - - Access-Control-Allow-Origin
+      - "*"
+    - - Cf-Cache-Status
+      - HIT
+    - - Server
+      - cloudflare-nginx
+    - - Cf-Ray
+      - 2f17703b303a4602-TPE
+  proxy_headers: !ruby/object:HTTP::Headers
+    pile: []
+  content_type: !ruby/struct:HTTP::ContentType
+    mime_type: application/json
+    charset: utf-8
+  body: !ruby/object:HTTP::Response::Body
+    client: !ruby/object:HTTP::Connection
+      persistent: false
+      keep_alive_timeout: 5.0
+      pending_request: false
+      pending_response: false
+      failed_proxy_connect: false
+      parser: !ruby/object:HTTP::Response::Parser
+        parser: !ruby/object:HTTP::Parser {}
+        finished: false
+        headers: 
+        chunk: 
+      socket: !ruby/object:HTTP::Timeout::Null
+        options: {}
+        socket: !ruby/object:TCPSocket {}
+      keep_alive: false
+    streaming: false
+    contents: '{"Title":"Star Wars","Year":"1983","Rated":"N/A","Released":"01 May
+      1983","Runtime":"N/A","Genre":"Action, Adventure, Sci-Fi","Director":"N/A","Writer":"N/A","Actors":"Harrison
+      Ford, Alec Guinness, Mark Hamill, James Earl Jones","Plot":"N/A","Language":"English","Country":"USA","Awards":"N/A","Poster":"http://ia.media-imdb.com/images/M/MV5BMWJhYWQ3ZTEtYTVkOS00ZmNlLWIxZjYtODZjNTlhMjMzNGM2XkEyXkFqcGdeQXVyNzg5OTk2OA@@._V1_SX300.jpg","Metascore":"N/A","imdbRating":"7.9","imdbVotes":"356","imdbID":"tt0251413","Type":"game","Response":"True"}'
     encoding: utf-8
