@@ -1,12 +1,12 @@
 require 'http'
 
-module airbnb
+module Airbnb
 
-  class roomsinfo
-    attr_reader :client_id, :location
+  class Roomsinfo
+    attr_reader :airbnb_client_id, :location
 
-    def initialize(client_id, location)
-      @client_id = client_id
+    def initialize(airbnb_client_id:, location:)
+      @airbnb_client_id = airbnb_client_id
       @location = location
     end
 
@@ -15,13 +15,14 @@ module airbnb
 
       airbnb_rooms_response =
         HTTP.get("https://api.airbnb.com/v2/search_results",
-                 params: { client_id: @client_id,
+                 params: { client_id: @airbnb_client_id,
                            location: @location
                          })
       rooms = JSON.load(airbnb_rooms_response.to_s)['search_results']
-      rooms_data = rooms['listing'].first
-      @rooms = { city: rooms_data['city'],
-                 id: rooms_data['id']
+
+      rooms_data = rooms.first['listing']
+      @rooms = {city: rooms_data['city'],
+                id: rooms_data['id']
                }
     end
   end
