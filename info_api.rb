@@ -20,20 +20,17 @@ response[:movie] = movie_response
 movie = JSON.load(movie_response.to_s)['imdbID']
 results[:movie] = movie
 
-
-# Airbnb search reviews API
-listing_id = '15312519'
-role = 'all'
-airbnb_response = HTTP.get(
-  'https://api.airbnb.com/v2/reviews', 
-  params: { 
-    client_id: credentials[:airbnb_client_id],
-    listing_id: listing_id,
-    role: role 
-  })
-response[:airbnb] = airbnb_response
-reviews = JSON.load(airbnb_response.to_s)['reviews']
-results[:reviews] = reviews
+# Airbnb search rooms API
+location = 'Hsinchu'
+airbnb_rooms_response = HTTP.get(
+  'https://api.airbnb.com/v2/search_results',
+    params: { 
+      client_id: credentials[:airbnb_client_id],
+      location: location
+    })
+response[:airbnb_rooms] = airbnb_rooms_response
+rooms = JSON.load(airbnb_rooms_response.to_s)['search_results']
+results[:rooms] = rooms
 
 #Skyscanner API
 market = 'GB'
