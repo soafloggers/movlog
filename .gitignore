@@ -1,3 +1,2 @@
-credentials.yml
-response.yml
-results.yml
+config/
+spec/fixtures/
