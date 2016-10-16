@@ -1,20 +1,12 @@
-require 'http'
+require_relative 'omdb_api'
 
 module Movlog
   class Movie
     attr_reader :imdb_id
 
-    def initialize(keyword:)
-      movie_response = HTTP.get(
-        'http://www.omdbapi.com',
-        params: {
-          t: keyword,
-          y: '',
-          plot: 'short',
-          r: 'json'
-        })
-
-      movie = JSON.load(movie_response.to_s)
+    def initialize(omdb_api, t:nil)
+      @omdb_api = omdb_api
+      movie = @omdb_api.movie_info(t)
       @imdb_id = movie['imdbID']
     end
   end

@@ -2,7 +2,7 @@ require_relative 'spec_helper.rb'
 
 describe 'Movlog specifications' do
   before do
-    # @omdb_api = Movlog::OmdbApi.new()
+    @omdb_api = Movlog::OmdbApi.new
 
     @airbnb_api = Airbnb::AirbnbApi.new(
       client_id: CREDENTIALS[:airbnb_client_id]
@@ -13,11 +13,11 @@ describe 'Movlog specifications' do
     )
   end
 
-  # it 'should get the IMDB ID of a movie' do
-  #   movie = Movlog::Movie.new(@omdb_api, t: CREDENTIALS[:keyword])
-
-  #   movie.imdb_id.length.must_be :>, 0
-  # end
+  it 'should get the IMDB ID of a movie' do
+    movie = Movlog::Movie.new(@omdb_api, t: CREDENTIALS[:keyword])
+    
+    movie.imdb_id.length.must_be :>, 0
+  end
 
   it 'should get routes suggested by Skyscanner' do
     route_meta = Skyscanner::RouteMeta.new(
