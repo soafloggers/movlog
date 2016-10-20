@@ -1,11 +1,13 @@
+# frozen_string_literal: true
 require_relative 'skyscanner_api'
 
 module Skyscanner
+  # Route info
   class Route
     attr_reader :route_meta
     attr_reader :routes
 
-    def initialize(skyscanner_api:nil, route_meta:nil)
+    def initialize(skyscanner_api: nil, route_meta: nil)
       @skyscanner_api = skyscanner_api
       @route_meta = route_meta
     end
@@ -18,14 +20,15 @@ module Skyscanner
     end
   end
 
+  #
   class RouteMeta
     attr_reader :market, :currency, :locale
     attr_reader :origin_place, :destination_place
     attr_reader :outbound_partial_date, :inbound_partial_date
 
-    def initialize(market:nil, currency:nil, locale:nil,
-                   origin_place:nil, destination_place:nil,
-                   outbound_partial_date:nil, inbound_partial_date:nil)
+    def initialize(market: nil, currency: nil, locale: nil,
+                   origin_place: nil, destination_place: nil,
+                   outbound_partial_date: nil, inbound_partial_date: nil)
       @market = market
       @currency = currency
       @locale = locale
