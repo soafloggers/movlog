@@ -1,7 +1,12 @@
 # frozen_string_literal: true
+require 'simplecov'
+SimpleCov.start
+
+require 'yaml'
 require 'minitest/autorun'
 require 'minitest/rg'
-require 'yaml'
+require 'vcr'
+require 'webmock'
 
 require_relative '../lib/omdb_api'
 require_relative '../lib/movie.rb'
