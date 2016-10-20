@@ -1,11 +1,21 @@
 # frozen_string_literal: true
 require 'rake/testtask'
 
-task default: :spec
+namespace :spec do
+  desc 'run all tests'
+  task all: [:omdb, :skyscanner, :airbnb]
 
-desc 'run tests'
-task :spec do
-  sh 'ruby spec/movlog_spec.rb'
+  task :omdb do
+    sh 'ruby spec/omdb_spec.rb'
+  end
+
+  task :skyscanner do
+    sh 'ruby spec/skyscanner_spec.rb'
+  end
+
+  task :airbnb do
+    sh 'ruby spec/airbnb_spec.rb'
+  end
 end
 
 desc 'delete cassette fixtures'
