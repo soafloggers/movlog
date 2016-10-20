@@ -6,10 +6,14 @@ module Movlog
   class Movie
     attr_reader :imdb_id
 
-    def initialize(omdb_api, t: nil)
+    def initialize(omdb_api, data: nil)
       @omdb_api = omdb_api
-      movie = @omdb_api.movie_info(t)
-      @imdb_id = movie['imdbID']
+      @imdb_id = data['imdbID']
+    end
+
+    def self.find(omdb_api, t:)
+      movie_data = omdb_api.movie_info(t)
+      new(omdb_api, data: movie_data)
     end
   end
 end

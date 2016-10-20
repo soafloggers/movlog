@@ -7,7 +7,7 @@ describe 'OMDB specifications' do
   end
 
   it 'should get the IMDB ID of a movie' do
-    movie = Movlog::Movie.new(@omdb_api, t: CREDENTIALS[:keyword])
+    movie = Movlog::Movie.find(@omdb_api, t: CREDENTIALS[:keyword])
     movie.imdb_id.length.must_be :>, 0
   end
 end
