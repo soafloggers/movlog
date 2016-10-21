@@ -8,12 +8,7 @@ require 'minitest/rg'
 require 'vcr'
 require 'webmock'
 
-require_relative '../lib/omdb_api'
-require_relative '../lib/movie.rb'
-require_relative '../lib/airbnb_api'
-require_relative '../lib/room.rb'
-require_relative '../lib/skyscanner_api'
-require_relative '../lib/routes.rb'
+
 
 FIXTURES_FOLDER = 'spec/fixtures'
 CASSETTES_FOLDER = "#{FIXTURES_FOLDER}/cassettes"
