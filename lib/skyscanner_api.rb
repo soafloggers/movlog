@@ -12,9 +12,9 @@ module Skyscanner
       @api_key = api_key
     end
 
-    def routes_info(route_meta)
+    def routes_info(data)
       skyscanner_routes_response = HTTP.get(
-        routes_info_url(route_meta),
+        route_info_url(data),
         params: {
           apiKey: @api_key
         }
@@ -24,11 +24,25 @@ module Skyscanner
 
     private
 
-    def routes_info_url(route_meta)
-      URI.join(SKY_API_URL,
-        "#{route_meta.market}/#{route_meta.currency}/#{route_meta.locale}/",
-        "#{route_meta.origin_place}/#{route_meta.destination_place}/",
-        "#{route_meta.outbound_partial_date}/#{route_meta.inbound_partial_date}")
+    def route_info_url(data)
+      URI.join(
+        SKY_API_URL,
+        route_env_param(data[:market], data[:currency], data[:locale]),
+        route_place_param(data[:origin], data[:destination]),
+        route_date_param(data[:outbound], data[:inbound])
+      )
+    end
+
+    def route_env_param(market, currency, locale)
+      "#{market}/#{currency}/#{locale}/"
+    end
+
+    def route_place_param(origin, destination)
+      "#{origin}/#{destination}/"
+    end
+
+    def route_date_param(outbound, inbound)
+      "#{outbound}/#{inbound}"
     end
   end
 end

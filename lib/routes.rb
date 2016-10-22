@@ -4,38 +4,44 @@ require_relative 'skyscanner_api'
 module Skyscanner
   # Route info
   class Route
-    attr_reader :route_meta
+    attr_reader :market, :currency, :locale
+    attr_reader :origin, :destination
+    attr_reader :outbound, :inbound
     attr_reader :routes
 
-    def initialize(skyscanner_api: nil, route_meta: nil)
+    def initialize(skyscanner_api, data)
       @skyscanner_api = skyscanner_api
-      @route_meta = route_meta
+      @routes = data[:routes]
+      load_env_data(data['market'], data['currency'], data['locale'])
+      load_place(data['origin'], data['destination'])
+      load_date(data['outbound'], data['inbound'])
     end
 
     def routes_info
-      return @routes if @routes
-
-      @routes = @skyscanner_api.routes_info(@route_meta)
-      routes
+      @routes
     end
-  end
 
-  #
-  class RouteMeta
-    attr_reader :market, :currency, :locale
-    attr_reader :origin_place, :destination_place
-    attr_reader :outbound_partial_date, :inbound_partial_date
+    def self.find(skyscanner_api, data)
+      data[:routes] = skyscanner_api.routes_info(data)
+      new(skyscanner_api, data)
+    end
 
-    def initialize(market: nil, currency: nil, locale: nil,
-                   origin_place: nil, destination_place: nil,
-                   outbound_partial_date: nil, inbound_partial_date: nil)
+    private
+
+    def load_env_data(market, currency, locale)
       @market = market
       @currency = currency
       @locale = locale
-      @origin_place = origin_place
-      @destination_place = destination_place
-      @outbound_partial_date = outbound_partial_date
-      @inbound_partial_date = inbound_partial_date
+    end
+
+    def load_place(origin, destination)
+      @origin = origin
+      @destination = destination
+    end
+
+    def load_date(outbound, inbound)
+      @outbound = outbound
+      @inbound = inbound
     end
   end
 end

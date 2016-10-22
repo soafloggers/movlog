@@ -22,14 +22,13 @@ describe 'Skyscanner specifications' do
   end
 
   it 'should get routes suggested by Skyscanner' do
-    route_meta = Skyscanner::RouteMeta.new(
+    route_meta = {
       market: 'GB', currency: 'GBP', locale: 'en-GB',
-      origin_place: 'LON', destination_place: 'UK',
-      outbound_partial_date: 'anytime', inbound_partial_date: 'anytime'
-    )
-    routes = Skyscanner::Route.new(
-      skyscanner_api: @skyscanner_api,
-      route_meta: route_meta
+      origin: 'LON', destination: 'UK',
+      outbound: 'anytime', inbound: 'anytime'
+    }
+    routes = Skyscanner::Route.find(
+      @skyscanner_api, route_meta
     )
     routes = routes.routes_info
     routes.length.must_be :>, 0
