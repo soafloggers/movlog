@@ -21,6 +21,10 @@ module Airbnb
       end
     end
 
+    def self.find(airbnb_api: nil, location: nil)
+      new(airbnb_api: nil, location: nil)
+    end
+
     private
 
     def room(item)
