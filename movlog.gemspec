@@ -3,7 +3,7 @@ $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 require 'movlog/version'
 
 Gem::Specification.new do |s|
-  s.name        =  'gemspec'
+  s.name        =  'movlog'
   s.version     =  Movlog::VERSION
 
   s.summary     =  'Gets movie content from omdb'
