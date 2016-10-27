@@ -6,15 +6,23 @@ module Airbnb
   class AirbnbApi
     AIRBNB_URL = 'https://api.airbnb.com/v2/search_results'
 
-    def initialize(client_id: nil)
-      @client_id = client_id
+    def self.config=(credentials)
+      @config = {} unless @config
+      @config.update(credentials)
     end
 
-    def rooms_result(location)
+    def self.config
+      return @config if @config
+      @config = {
+        client_id: ENV['AIRBNB_CLIENT_ID']
+      }
+    end
+
+    def self.rooms_result(location)
       airbnb_rooms_response = HTTP.get(
         AIRBNB_URL,
         params: {
-          client_id: @client_id,
+          client_id: config[:client_id],
           location: location
         }
       )
