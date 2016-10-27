@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 require_relative 'spec_helper.rb'
-require_relative '../lib/airbnb_api'
-require_relative '../lib/room.rb'
 
 describe 'Airbnb specifications' do
   VCR.configure do |c|

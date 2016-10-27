@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 require_relative 'spec_helper.rb'
-require_relative '../lib/skyscanner_api'
-require_relative '../lib/routes.rb'
 
 describe 'Skyscanner specifications' do
   VCR.configure do |c|
