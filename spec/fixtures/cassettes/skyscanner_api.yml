@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://partners.api.skyscanner.net/apiservices/browseroutes/v1.0/GB/GBP/en-GB/LON/UK/anytime/anytime?apiKey=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - partners.api.skyscanner.net
+      User-Agent:
+      - http.rb/2.0.3
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Vary:
+      - Accept
+      Cache-Control:
+      - public,max-age=3600
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 12:49:39 GMT
+      Connection:
+      - close
+      Content-Length:
+      - '76'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ValidationErrors":[{"ParameterName":"apikey","Message":"ApiKey invalid"}]}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 12:49:36 GMT
+recorded_with: VCR 3.0.3

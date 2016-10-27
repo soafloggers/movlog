@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?plot=short&r=json&t=<KEYWORD>&y=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - www.omdbapi.com
+      User-Agent:
+      - http.rb/2.0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Oct 2016 12:49:37 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '939'
+      Connection:
+      - close
+      Set-Cookie:
+      - __cfduid=de11293b1798cb4d81f3d7540739358531477572577; expires=Fri, 27-Oct-17
+        12:49:37 GMT; path=/; domain=.omdbapi.com; HttpOnly
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 28 Oct 2016 12:49:37 GMT
+      Last-Modified:
+      - Thu, 27 Oct 2016 03:19:57 GMT
+      Vary:
+      - "*"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 2f8644dee3034608-TPE
+    body:
+      encoding: UTF-8
+      string: '{"Title":"The Hobbit: An Unexpected Journey","Year":"2012","Rated":"PG-13","Released":"14
+        Dec 2012","Runtime":"169 min","Genre":"Adventure, Fantasy","Director":"Peter
+        Jackson","Writer":"Fran Walsh (screenplay), Philippa Boyens (screenplay),
+        Peter Jackson (screenplay), Guillermo del Toro (screenplay), J.R.R. Tolkien
+        (novel)","Actors":"Ian McKellen, Martin Freeman, Richard Armitage, Ken Stott","Plot":"A
+        reluctant <KEYWORD>, Bilbo Baggins, sets out to the Lonely Mountain with a
+        spirited group of dwarves to reclaim their mountain home - and the gold within
+        it - from the dragon Smaug.","Language":"English","Country":"USA, New Zealand","Awards":"Nominated
+        for 3 Oscars. Another 10 wins & 70 nominations.","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTcwNTE4MTUxMl5BMl5BanBnXkFtZTcwMDIyODM4OA@@._V1_SX300.jpg","Metascore":"58","imdbRating":"7.9","imdbVotes":"643,876","imdbID":"tt0903624","Type":"movie","Response":"True"}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 12:49:33 GMT
+recorded_with: VCR 3.0.3

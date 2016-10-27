@@ -1,4 +1,4 @@
-config/
-spec/fixtures/
+config/credentials.yml
 coverage/
 Gemfile.lock
+*.gem
