@@ -1,3 +1,9 @@
+PATH
+  remote: .
+  specs:
+    gemspec (0.1.0)
+      http (~> 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -70,6 +76,7 @@ PLATFORMS
 DEPENDENCIES
   flay
   flog
+  gemspec!
   http
   minitest
   minitest-rg
