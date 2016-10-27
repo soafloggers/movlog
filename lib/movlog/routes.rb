@@ -9,8 +9,7 @@ module Skyscanner
     attr_reader :outbound, :inbound
     attr_reader :routes
 
-    def initialize(skyscanner_api, data)
-      @skyscanner_api = skyscanner_api
+    def initialize(data)
       @routes = data[:routes]
       load_env_data(data['market'], data['currency'], data['locale'])
       load_place(data['origin'], data['destination'])
@@ -21,9 +20,9 @@ module Skyscanner
       @routes
     end
 
-    def self.find(skyscanner_api, data)
-      data[:routes] = skyscanner_api.routes_info(data)
-      new(skyscanner_api, data)
+    def self.find(data)
+      data[:routes] = SkyscannerApi.routes_info(data)
+      new(data)
     end
 
     private
