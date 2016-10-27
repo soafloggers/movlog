@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), *%w(.. lib))
+require 'movlog'
+
+keyword = ARGV[0] || ENV['OMDB_KEYWORD']
+unless keyword
+  puts 'USAGE: movlog [keyword]'
+  exit(1)
+end
