@@ -1,3 +1,4 @@
 config/
 spec/fixtures/
 coverage/
+Gemfile.lock

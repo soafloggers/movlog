@@ -13,3 +13,5 @@ gem 'simplecov'
 gem 'flog'
 gem 'flay'
 gem 'rubocop'
+
+gemspec

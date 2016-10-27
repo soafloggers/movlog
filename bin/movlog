@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 $LOAD_PATH.unshift File.join(File.dirname(__FILE__), *%w(.. lib))
-require 'movlog'
+require '../lib/movlog/omdb_api.rb'
 
 omdb_keyword = ARGV[0] || ENV['OMDB_KEYWORD']
 unless omdb_keyword
@@ -11,5 +11,4 @@ end
 
 movie = Movlog::Movie.find(t: omdb_keyword)
 
-puts movie.imdb_id
-end
+puts 'imdb_id: '+movie.imdb_id
