@@ -17,7 +17,10 @@ CASSETTE_FILE_1 = 'omdb_api'
 CASSETTE_FILE_2 = 'skyscanner_api'
 CASSETTE_FILE_3 = 'airbnb_api'
 
-CREDENTIALS = YAML.load(File.read('config/credentials.yml'))
+if File.file?('config/credentials.yml')
+  credentials = YAML.load(File.read('config/credentials.yml'))
+  ENV['OMDB_KEYWORD'] = credentials[:keyword]
+end
 
 RESULT_FILE_1 = "#{FIXTURES_FOLDER}/omdb_api_results.yml"
 RESULT_FILE_2 = "#{FIXTURES_FOLDER}/skyscanner_api_results.yml"
