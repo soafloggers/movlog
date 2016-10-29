@@ -5,7 +5,7 @@ require 'json'
 module Movlog
   # Service for all OMDB API calls
   class OmdbApi
-    OMDB_URL = 'http://www.omdbapi.com'
+    OMDB_URL = 'http://www.omdbapi.com/'
 
     def self.config=(credentials)
       @config = {} unless @config
