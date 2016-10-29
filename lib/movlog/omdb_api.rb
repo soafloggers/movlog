@@ -7,23 +7,11 @@ module Movlog
   class OmdbApi
     OMDB_URL = 'http://www.omdbapi.com/'
 
-    def self.config=(credentials)
-      @config = {} unless @config
-      @config.update(credentials)
-    end
-
-    def self.config
-      return @config if @config
-      @config = {
-        t: ENV['OMDB_KEYWORD']
-      }
-    end
-
     def self.movie_info(t)
       movie_response = HTTP.get(
         OMDB_URL,
         params: {
-          t: config[:t],
+          t: t,
           y: '',
           plot: 'short',
           r: 'json'

@@ -11,4 +11,6 @@ end
 
 movie = Movlog::Movie.find(t: omdb_keyword)
 
-puts "imdb id: #{movie.imdb_id}"
+puts "#{movie.title} (#{movie.year})"
+puts "Actors: #{movie.actors}"
+puts "Plot: #{movie.plot}"
