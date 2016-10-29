@@ -1,5 +1,6 @@
 # Movlog Gem
 
+[![Gem Version](https://badge.fury.io/rb/movlog.svg)](https://badge.fury.io/rb/movlog)
 [![Build Status](https://travis-ci.org/soafloggers/movlog.svg?branch=master)](https://travis-ci.org/soafloggers/movlog)
 
 Movlog is a gem that specializes in getting plane ticket price and accommodation info of filming locations of a movie.
