@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://www.omdbapi.com/?plot=short&r=json&t=<KEYWORD>&y=
+    uri: http://www.omdbapi.com/?plot=short&r=json&t=hobbit&y=
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 27 Oct 2016 12:49:37 GMT
+      - Sat, 29 Oct 2016 07:55:00 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -27,14 +27,14 @@ http_interactions:
       Connection:
       - close
       Set-Cookie:
-      - __cfduid=de11293b1798cb4d81f3d7540739358531477572577; expires=Fri, 27-Oct-17
-        12:49:37 GMT; path=/; domain=.omdbapi.com; HttpOnly
+      - __cfduid=d643dd3f79cabe664b98080933f229be41477727700; expires=Sun, 29-Oct-17
+        07:55:00 GMT; path=/; domain=.omdbapi.com; HttpOnly
       Cache-Control:
       - public, max-age=86400
       Expires:
-      - Fri, 28 Oct 2016 12:49:37 GMT
+      - Sun, 30 Oct 2016 07:55:00 GMT
       Last-Modified:
-      - Thu, 27 Oct 2016 03:19:57 GMT
+      - Sat, 29 Oct 2016 06:17:48 GMT
       Vary:
       - "*"
       X-Aspnet-Version:
@@ -48,7 +48,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 2f8644dee3034608-TPE
+      - 2f95100e43c8469e-TPE
     body:
       encoding: UTF-8
       string: '{"Title":"The Hobbit: An Unexpected Journey","Year":"2012","Rated":"PG-13","Released":"14
@@ -56,10 +56,10 @@ http_interactions:
         Jackson","Writer":"Fran Walsh (screenplay), Philippa Boyens (screenplay),
         Peter Jackson (screenplay), Guillermo del Toro (screenplay), J.R.R. Tolkien
         (novel)","Actors":"Ian McKellen, Martin Freeman, Richard Armitage, Ken Stott","Plot":"A
-        reluctant <KEYWORD>, Bilbo Baggins, sets out to the Lonely Mountain with a
-        spirited group of dwarves to reclaim their mountain home - and the gold within
-        it - from the dragon Smaug.","Language":"English","Country":"USA, New Zealand","Awards":"Nominated
+        reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited
+        group of dwarves to reclaim their mountain home - and the gold within it -
+        from the dragon Smaug.","Language":"English","Country":"USA, New Zealand","Awards":"Nominated
         for 3 Oscars. Another 10 wins & 70 nominations.","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTcwNTE4MTUxMl5BMl5BanBnXkFtZTcwMDIyODM4OA@@._V1_SX300.jpg","Metascore":"58","imdbRating":"7.9","imdbVotes":"643,876","imdbID":"tt0903624","Type":"movie","Response":"True"}'
     http_version: 
-  recorded_at: Thu, 27 Oct 2016 12:49:33 GMT
+  recorded_at: Sat, 29 Oct 2016 07:54:56 GMT
 recorded_with: VCR 3.0.3

@@ -17,9 +17,10 @@ CASSETTE_FILE_1 = 'omdb_api'
 CASSETTE_FILE_2 = 'skyscanner_api'
 CASSETTE_FILE_3 = 'airbnb_api'
 
+OMDB_KEYWORD = 'hobbit'
+
 if File.file?('config/credentials.yml')
   credentials = YAML.load(File.read('config/credentials.yml'))
-  ENV['OMDB_KEYWORD'] = credentials[:keyword]
   ENV['AIRBNB_CLIENT_ID'] = credentials[:airbnb_client_id]
   ENV['SKY_API_KEY'] = credentials[:skyscanner_api_key]
 end
