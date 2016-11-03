@@ -1,16 +1,6 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
-$LOAD_PATH.unshift File.join(File.dirname(__FILE__), *%w(.. lib))
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
 require 'movlog'
 
-omdb_keyword = ARGV[0]
-unless omdb_keyword
-  puts 'USAGE: movlog [omdb_keyword]'
-  exit(1)
-end
-
-movie = Movlog::Movie.find(t: omdb_keyword)
-
-puts "#{movie.title} (#{movie.year})"
-puts "Actors: #{movie.actors}"
-puts "Plot: #{movie.plot}"
+puts Movlog::Runner.run!(ARGV)

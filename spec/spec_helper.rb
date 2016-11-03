@@ -25,6 +25,14 @@ if File.file?('config/credentials.yml')
   ENV['SKY_API_KEY'] = credentials[:skyscanner_api_key]
 end
 
+VCR.configure do |c|
+  c.cassette_library_dir = CASSETTES_FOLDER
+  c.hook_into :webmock
+
+  c.filter_sensitive_data('<SKY_API_KEY>')  { ENV['SKY_API_KEY'] }
+  c.filter_sensitive_data('<AIRBNB_CLIENT_ID>') { ENV['AIRBNB_CLIENT_ID'] }
+end
+
 RESULT_FILE_1 = "#{FIXTURES_FOLDER}/omdb_api_results.yml"
 RESULT_FILE_2 = "#{FIXTURES_FOLDER}/skyscanner_api_results.yml"
 RESULT_FILE_3 = "#{FIXTURES_FOLDER}/airbnb_api_results.yml"
