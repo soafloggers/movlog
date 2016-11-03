@@ -29,7 +29,7 @@ module Movlog
     def self.location(l)
       movie_id = l
 
-      page_url = "http://www.imdb.com/title/#{movie_id}/locations?ref_=tt_dt_dt"
+      page_url = "http://www.imdb.com/title/tt1211837/locations?ref_=tt_dt_dt"
 
       # Fetch and parse HTML document
       location_arr = []
