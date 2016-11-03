@@ -23,6 +23,9 @@ describe 'OMDB specifications' do
     @movie.actors.length.must_be :>, 0
     @movie.poster.length.must_be :>, 0
     @movie.plot.length.must_be :>, 0
-    #@movie.location.length.must_be :>, 0
+  end
+
+  it 'should get the filming location of a movie' do
+    @movie.get_location.length.must_be :>, 0
   end
 end
