@@ -27,6 +27,7 @@ adityautamawijaya@gmail.com']
   s.add_development_dependency 'flog', '~> 4.4'
   s.add_development_dependency 'flay', '~> 2.8'
   s.add_development_dependency 'rubocop', '~> 0.42'
+  s.add_development_dependency 'nokogiri', '~> 1.6'
 
   s.homepage    =  'https://github.com/soafloggers/movlog'
   s.license     =  'MIT'
