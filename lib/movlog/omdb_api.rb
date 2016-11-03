@@ -40,7 +40,7 @@ module Movlog
 
       doc.search('//div[@class="soda sodavote even"]/dt/a').each { |link| location_arr <<  link.content}
 
-      location_arr
+      JSON.parse(location_arr.to_s)
     end
   end
 end
