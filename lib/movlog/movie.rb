@@ -13,7 +13,7 @@ module Movlog
       @actors = data['Actors']
       @poster = data['Poster']
       @plot = data['Plot']
-      @location = location
+      #@location = location
     end
 
     def self.find(t:)

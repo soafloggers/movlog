@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    movlog (0.2.6)
+    movlog (0.2.7)
       http (~> 2.0)
 
 GEM
