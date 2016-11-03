@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    movlog (0.2.9)
+    movlog (0.2.10)
       http (~> 2.0)
 
 GEM
@@ -82,7 +82,7 @@ DEPENDENCIES
   minitest (~> 5.9)
   minitest-rg (~> 5.2)
   movlog!
-  nokogiri (~> 1.6)
+  nokogiri (~> 1.6, >= 1.6.8.1)
   rake (~> 11.3)
   rubocop (~> 0.42)
   simplecov (~> 0.12)
