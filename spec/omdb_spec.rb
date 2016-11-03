@@ -24,5 +24,6 @@ describe 'OMDB specifications' do
     @movie.poster.length.must_be :>, 0
     @movie.plot.length.must_be :>, 0
     @movie.location.length.must_be :>, 0
+    puts @movie.location
   end
 end
