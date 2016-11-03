@@ -26,10 +26,9 @@ module Movlog
       JSON.load(movie_response.to_s)
     end
 
-    def self.location(l)
-      movie_id = l
-
-      page_url = "http://www.imdb.com/title/tt1211837/locations?ref_=tt_dt_dt"
+    def self.location(movie_id)
+      
+      page_url = "http://www.imdb.com/title/#{movie_id}/locations?ref_=tt_dt_dt"
 
       # Fetch and parse HTML document
       location_arr = []
