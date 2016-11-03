@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 29 Oct 2016 07:55:00 GMT
+      - Thu, 03 Nov 2016 06:55:30 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -27,14 +27,14 @@ http_interactions:
       Connection:
       - close
       Set-Cookie:
-      - __cfduid=d643dd3f79cabe664b98080933f229be41477727700; expires=Sun, 29-Oct-17
-        07:55:00 GMT; path=/; domain=.omdbapi.com; HttpOnly
+      - __cfduid=d1ce9d4c06ce140153f597ab83616b8c21478156130; expires=Fri, 03-Nov-17
+        06:55:30 GMT; path=/; domain=.omdbapi.com; HttpOnly
       Cache-Control:
       - public, max-age=86400
       Expires:
-      - Sun, 30 Oct 2016 07:55:00 GMT
+      - Fri, 04 Nov 2016 06:55:30 GMT
       Last-Modified:
-      - Sat, 29 Oct 2016 06:17:48 GMT
+      - Wed, 02 Nov 2016 14:43:05 GMT
       Vary:
       - "*"
       X-Aspnet-Version:
@@ -48,7 +48,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 2f95100e43c8469e-TPE
+      - 2fbdebc7670945f0-TPE
     body:
       encoding: UTF-8
       string: '{"Title":"The Hobbit: An Unexpected Journey","Year":"2012","Rated":"PG-13","Released":"14
@@ -61,5 +61,5 @@ http_interactions:
         from the dragon Smaug.","Language":"English","Country":"USA, New Zealand","Awards":"Nominated
         for 3 Oscars. Another 10 wins & 70 nominations.","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTcwNTE4MTUxMl5BMl5BanBnXkFtZTcwMDIyODM4OA@@._V1_SX300.jpg","Metascore":"58","imdbRating":"7.9","imdbVotes":"643,876","imdbID":"tt0903624","Type":"movie","Response":"True"}'
     http_version: 
-  recorded_at: Sat, 29 Oct 2016 07:54:56 GMT
+  recorded_at: Thu, 03 Nov 2016 06:55:20 GMT
 recorded_with: VCR 3.0.3

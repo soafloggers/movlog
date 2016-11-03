@@ -2,12 +2,6 @@
 require_relative 'spec_helper.rb'
 
 describe 'Skyscanner specifications' do
-  VCR.configure do |c|
-    c.cassette_library_dir = CASSETTES_FOLDER
-    c.hook_into :webmock
-    c.filter_sensitive_data('<SKY_API_KEY>') { ENV['SKY_API_KEY'] }
-  end
-
   before do
     VCR.insert_cassette CASSETTE_FILE_2, record: :new_episodes
   end
