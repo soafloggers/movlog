@@ -5,7 +5,8 @@ module Movlog
   # Movie info
   class Movie
     attr_reader :imdb_id, :title, :year, :actors, :poster, :plot, :location
-
+    attr_reader :response
+    
     def initialize(data:)
       @imdb_id = data['imdbID']
       @title = data['Title']
@@ -13,6 +14,7 @@ module Movlog
       @actors = data['Actors']
       @poster = data['Poster']
       @plot = data['Plot']
+      @response = data['Response']
     end
 
     def self.find(t:)

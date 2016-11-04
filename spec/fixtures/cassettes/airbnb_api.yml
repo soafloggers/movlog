@@ -413,4 +413,56 @@ http_interactions:
         home/apt","room_type_category":"entire_home","scrim_color":"","star_rating":null,"thumbnail_url":"https://a2.muscache.com/im/pictures/19a8d361-5765-4a7c-ae6a-d5abf406d579.jpg?aki_policy=small","user":{"first_name":"George","has_profile_pic":true,"id":17214564,"picture_url":"https://a1.muscache.com/im/users/17214564/profile_pic/1403646551/original.jpg?aki_policy=profile_x_medium","smart_name":"George","thumbnail_url":"https://a1.muscache.com/im/users/17214564/profile_pic/1403646551/original.jpg?aki_policy=profile_small","is_superhost":false},"user_id":17214564,"xl_picture_url":"https://a2.muscache.com/im/pictures/19a8d361-5765-4a7c-ae6a-d5abf406d579.jpg?aki_policy=x_large","preview_encoded_png":"","picture_urls":["https://a2.muscache.com/im/pictures/19a8d361-5765-4a7c-ae6a-d5abf406d579.jpg?aki_policy=large","https://a2.muscache.com/im/pictures/1d6882b3-9e49-410f-b821-b29c044925a3.jpg?aki_policy=large","https://a2.muscache.com/im/pictures/94fe2108-960f-4b97-ae78-9d5339b22e6e.jpg?aki_policy=large","https://a2.muscache.com/im/pictures/7694590d-9163-4907-8500-03f4376cf7c3.jpg?aki_policy=large","https://a2.muscache.com/im/pictures/89d42c1d-fb91-4851-9b87-cee7fcef6c66.jpg?aki_policy=large","https://a2.muscache.com/im/pictures/75b47245-1eb0-4212-b68d-98bd18bf0c72.jpg?aki_policy=large","https://a2.muscache.com/im/pictures/046b8800-d071-4785-907e-fcad2307d8da.jpg?aki_policy=large"],"xl_picture_urls":["https://a2.muscache.com/im/pictures/19a8d361-5765-4a7c-ae6a-d5abf406d579.jpg?aki_policy=x_large","https://a2.muscache.com/im/pictures/1d6882b3-9e49-410f-b821-b29c044925a3.jpg?aki_policy=x_large","https://a2.muscache.com/im/pictures/94fe2108-960f-4b97-ae78-9d5339b22e6e.jpg?aki_policy=x_large","https://a2.muscache.com/im/pictures/7694590d-9163-4907-8500-03f4376cf7c3.jpg?aki_policy=x_large","https://a2.muscache.com/im/pictures/89d42c1d-fb91-4851-9b87-cee7fcef6c66.jpg?aki_policy=x_large","https://a2.muscache.com/im/pictures/75b47245-1eb0-4212-b68d-98bd18bf0c72.jpg?aki_policy=x_large","https://a2.muscache.com/im/pictures/046b8800-d071-4785-907e-fcad2307d8da.jpg?aki_policy=x_large"]},"pricing_quote":{"available":false,"checkin":null,"checkout":null,"guests":1,"guest_details":{"number_of_adults":1,"number_of_children":0,"number_of_infants":0},"listing_currency":"USD","localized_currency":"USD","localized_nightly_price":100,"localized_service_fee":0,"localized_total_price":0,"nightly_price":100,"service_fee":0,"total_price":0},"viewed_at":null}]}'
     http_version: 
   recorded_at: Thu, 03 Nov 2016 06:55:26 GMT
+- request:
+    method: get
+    uri: https://api.airbnb.com/v2/search_results?client_id=&location=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.airbnb.com
+      User-Agent:
+      - http.rb/2.0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - nginx/1.7.12
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 400 Bad Request
+      Content-Security-Policy:
+      - 'default-src ''self'' https:; connect-src ''self'' https: ws://localhost.airbnb.com:8888
+        http:; font-src ''self'' data: *.muscache.com fonts.gstatic.com use.typekit.net;
+        frame-src *; img-src ''self'' https: http: data:; media-src ''self'' https:;
+        object-src ''self'' https:; script-src ''self'' https: ''unsafe-eval'' ''unsafe-inline''
+        http:; style-src ''self'' https: ''unsafe-inline'' http:; report-uri /tracking/csp?action=index&controller=v2&req_uuid=a69842b5-9bda-4fc8-b678-c3c71fec3295&version=5f2b66e8b906751fa0fcb1e06431c36e1f46f0fe;'
+      Cache-Control:
+      - no-cache
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"b3ad29e0c598b56988bca58614bfbfec"'
+      Strict-Transport-Security:
+      - max-age=10886400; includeSubdomains
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '75'
+      Date:
+      - Fri, 04 Nov 2016 02:05:02 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"error_code":400,"error":"invalid_key","error_message":"Invalid API
+        key."}'
+    http_version: 
+  recorded_at: Fri, 04 Nov 2016 02:05:02 GMT
 recorded_with: VCR 3.0.3
