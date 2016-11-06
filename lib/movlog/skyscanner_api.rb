@@ -24,7 +24,7 @@ module Skyscanner
       skyscanner_routes_response = HTTP.get(
         route_info_url(data),
         params: {
-          apiKey: config['api_key']
+          apiKey: config[:api_key]
         }
       )
       JSON.load(skyscanner_routes_response.to_s)
