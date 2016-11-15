@@ -27,7 +27,7 @@ module Skyscanner
           apiKey: config[:api_key]
         }
       )
-      JSON.load(skyscanner_routes_response.to_s)
+      JSON.parse(skyscanner_routes_response.to_s)
     end
 
     private
