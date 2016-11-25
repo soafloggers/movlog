@@ -22,14 +22,23 @@ module Geonames
 
     def airports
       return @airports if @airports
-      @airports = GeonamesApi.near_airports(lat: @lat, lng: @lng)
+      @airports = load_airport(GeonamesApi.near_airports(lat: @lat, lng: @lng))
     end
 
     private
 
     def load_geocoord(data)
-      @lat = data['lat']
-      @lng = data['lng']
+      @lat = data['lat'].to_f
+      @lng = data['lng'].to_f
+    end
+
+    def load_airport(airports)
+      airports.map do |ap|
+        {
+          name: ap['name'], countryCode: ap['countryCode'],
+          lat: ap['lat'].to_f, lng: ap['lng'].to_f
+        }
+      end
     end
   end
 end

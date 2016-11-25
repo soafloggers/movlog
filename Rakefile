@@ -3,7 +3,7 @@ require 'rake/testtask'
 
 namespace :spec do
   desc 'run all tests'
-  task all: [:omdb, :skyscanner, :airbnb]
+  task all: [:omdb, :skyscanner, :airbnb, :geonames]
 
   task :omdb do
     sh 'ruby spec/omdb_spec.rb'
@@ -15,6 +15,10 @@ namespace :spec do
 
   task :airbnb do
     sh 'ruby spec/airbnb_spec.rb'
+  end
+
+  task :geonames do
+    sh 'ruby spec/geonames_spec.rb'
   end
 end
 
