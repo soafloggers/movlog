@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    movlog (0.2.12)
+    movlog (0.3.0)
       http (~> 2.0)
       nokogiri (~> 1.6, >= 1.6.8.1)
 
@@ -26,7 +26,7 @@ GEM
       ruby_parser (~> 3.1, > 3.1.0)
       sexp_processor (~> 4.4)
     hashdiff (0.3.0)
-    http (2.0.3)
+    http (2.1.0)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
       http-form_data (~> 1.0.1)

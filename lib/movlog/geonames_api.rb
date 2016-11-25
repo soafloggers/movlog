@@ -4,7 +4,7 @@ require 'http'
 module Geonames
   # Service for transformation of location and find near airport
   class GeonamesApi
-    GEONAMES_URL = 'http://api.geonames.org/'
+    GEONAMES_URL = 'http://api.geonames.org'
     SEARCH_URL = [GEONAMES_URL, 'searchJSON'].join('/')
     FIND_NEARBY_URL = [GEONAMES_URL, 'findNearbyJSON'].join('/')
 
