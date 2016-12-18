@@ -201,4 +201,42 @@ http_interactions:
         Taoyuan International Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"25.07773","fcode":"AIRP"}]}'
     http_version: 
   recorded_at: Fri, 25 Nov 2016 05:10:02 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Ajim&username=<GEONAMES_USERNAME>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.geonames.org
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Nov 2016 07:52:52 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) mod_jk/1.2.41 OpenSSL/1.0.1e-fips
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json;charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":103,"geonames":[{"adminCode1":"28","lng":"10.75664","geonameId":2473937,"toponymName":"Ajim","countryId":"2464461","fcl":"P","population":0,"countryCode":"TN","name":"Ajim","fclName":"city,
+        village,...","countryName":"Tunisia","fcodeName":"populated place","adminName1":"Madanīn","lat":"33.72638","fcode":"PPL"}]}'
+    http_version: 
+  recorded_at: Fri, 25 Nov 2016 07:52:53 GMT
 recorded_with: VCR 3.0.3

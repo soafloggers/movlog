@@ -5,24 +5,21 @@ module Airbnb
   # Room info
   class RoomsInfo
     attr_reader :location
-    attr_reader :rooms
 
-    def initialize(location: nil)
-
+    def initialize(location)
       @location = location
     end
 
     def rooms
       return @rooms if @rooms
-
       rooms_data = AirbnbApi.rooms_result(@location)
       @rooms = rooms_data.map do |item|
         room(item)
       end
     end
 
-    def self.find(location: nil)
-      new(location: nil)
+    def self.find(location)
+      new(location)
     end
 
     private

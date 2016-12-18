@@ -11,7 +11,7 @@ describe 'Airbnb specifications' do
   end
 
   it 'should get the room info of a location' do
-    rooms_info = Airbnb::RoomsInfo.find(location: 'Hsinchu')
+    rooms_info = Airbnb::RoomsInfo.find('Ostuni')
     rooms = rooms_info.rooms
     rooms.length.must_be :>, 0
   end

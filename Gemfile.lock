@@ -1,19 +1,20 @@
 PATH
   remote: .
   specs:
-    movlog (0.3.0)
+    movlog (0.3.2)
       http (~> 2.0)
       nokogiri (~> 1.6, >= 1.6.8.1)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.4.0)
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
     ast (2.3.0)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     docile (1.1.5)
-    domain_name (0.5.20161021)
+    domain_name (0.5.20161129)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     flay (2.8.1)
@@ -25,7 +26,7 @@ GEM
       path_expander (~> 1.0)
       ruby_parser (~> 3.1, > 3.1.0)
       sexp_processor (~> 4.4)
-    hashdiff (0.3.0)
+    hashdiff (0.3.1)
     http (2.1.0)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
@@ -37,18 +38,19 @@ GEM
     http_parser.rb (0.6.0)
     json (2.0.2)
     mini_portile2 (2.1.0)
-    minitest (5.9.1)
+    minitest (5.10.1)
     minitest-rg (5.2.0)
       minitest (~> 5.0)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
-    parser (2.3.1.4)
+    parser (2.3.3.1)
       ast (~> 2.2)
-    path_expander (1.0.0)
+    path_expander (1.0.1)
     powerpack (0.1.1)
+    public_suffix (2.0.4)
     rainbow (2.1.0)
     rake (11.3.0)
-    rubocop (0.44.1)
+    rubocop (0.46.0)
       parser (>= 2.3.1.1, < 3.0)
       powerpack (~> 0.1)
       rainbow (>= 1.99.1, < 3.0)
@@ -67,9 +69,9 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
-    unicode-display_width (1.1.1)
+    unicode-display_width (1.1.2)
     vcr (3.0.3)
-    webmock (2.1.0)
+    webmock (2.3.1)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
