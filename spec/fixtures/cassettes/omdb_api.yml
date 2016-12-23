@@ -1873,4 +1873,154 @@ http_interactions:
         KCJiZSIpOwogICAgfQo8L3NjcmlwdD4KCiAgICA8L2JvZHk+CjwvaHRtbD4K
     http_version: 
   recorded_at: Thu, 03 Nov 2016 11:32:43 GMT
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?r=json&s=hobbit&type=movie
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - www.omdbapi.com
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 23 Dec 2016 09:41:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2050'
+      Connection:
+      - close
+      Set-Cookie:
+      - __cfduid=d5ce0b88a3d8304d4743d2d5dacf3a1b31482486095; expires=Sat, 23-Dec-17
+        09:41:35 GMT; path=/; domain=.omdbapi.com; HttpOnly
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Sat, 24 Dec 2016 09:41:35 GMT
+      Last-Modified:
+      - Fri, 23 Dec 2016 09:41:33 GMT
+      Vary:
+      - "*"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 315adbce2383469e-TPE
+    body:
+      encoding: UTF-8
+      string: '{"Search":[{"Title":"The Hobbit: An Unexpected Journey","Year":"2012","imdbID":"tt0903624","Type":"movie","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTcwNTE4MTUxMl5BMl5BanBnXkFtZTcwMDIyODM4OA@@._V1_SX300.jpg"},{"Title":"The
+        Hobbit: The Desolation of Smaug","Year":"2013","imdbID":"tt1170358","Type":"movie","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BMzU0NDY0NDEzNV5BMl5BanBnXkFtZTgwOTIxNDU1MDE@._V1_SX300.jpg"},{"Title":"The
+        Hobbit: The Battle of the Five Armies","Year":"2014","imdbID":"tt2310332","Type":"movie","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BODAzMDgxMDc1MF5BMl5BanBnXkFtZTgwMTI0OTAzMjE@._V1_SX300.jpg"},{"Title":"The
+        Hobbit","Year":"1977","imdbID":"tt0077687","Type":"movie","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjA0ODY3NTkwOF5BMl5BanBnXkFtZTcwODU3NzIyMQ@@._V1_SX300.jpg"},{"Title":"The
+        Hobbit","Year":"1966","imdbID":"tt1686804","Type":"movie","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BYTU4OTUwYmQtYjVhZS00ZGRkLWExY2EtYzY5NzkzZGY4YmU1XkEyXkFqcGdeQXVyMjMyNTkxNzY@._V1_SX300.jpg"},{"Title":"A
+        Day in the Life of a Hobbit","Year":"2002","imdbID":"tt0473467","Type":"movie","Poster":"http://ia.media-imdb.com/images/M/MV5BMTk3ODI5Nzk4Nl5BMl5BanBnXkFtZTcwMDE5MTcyMQ@@._V1_SX300.jpg"},{"Title":"The
+        Hobbit: An Unexpected Journey - The Company of Thorin","Year":"2013","imdbID":"tt3345514","Type":"movie","Poster":"N/A"},{"Title":"Secrets
+        of Middle-Earth: Inside Tolkien''s ''The Hobbit''","Year":"2003","imdbID":"tt0401776","Type":"movie","Poster":"http://ia.media-imdb.com/images/M/MV5BMTc4MzUxMDU3Nl5BMl5BanBnXkFtZTcwNjYxMzQyMQ@@._V1_SX300.jpg"},{"Title":"The
+        Hobbit: The Swedolation of Smaug","Year":"2014","imdbID":"tt4171362","Type":"movie","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BMzQxMTkyYmQtMWZmYi00NzJmLTg3MDItZmEyZDQ3NmE5OWE4XkEyXkFqcGdeQXVyMjMyNTkxNzY@._V1_SX300.jpg"},{"Title":"The
+        Hobbit Enigma","Year":"2008","imdbID":"tt1297277","Type":"movie","Poster":"N/A"}],"totalResults":"35","Response":"True"}'
+    http_version: 
+  recorded_at: Fri, 23 Dec 2016 09:41:35 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/title//locations?ref_=tt_dt_dt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Fri, 23 Dec 2016 10:28:52 GMT
+      Server:
+      - HTTPDaemon
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYj5RXZmurLubyUGTBj5f-gXmP6umTkO2NkvdIIZ5oZL_n_M5Jbpvl-jGK7idbOqjdC3ULYtZirybtZRIdIYQbTnmaBtu-hb--mvSvEN-7APoyMwNNvLJjy1jdB76t131vLT0-mowwevTV4JnOQSmXgAPd911eRoj_LV-UIAbKyfK0;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      - uu=BCYqiiuovIxN22VlWKqAuCNDt2T6umTkO2NkvdIIZ5oZL_m0oN8eAYT_SNL8Ve2tgfPjsOBWlYDIOPDw-e83vr7QTh-0cPejvyKxKtcRqdQPOlNE1uW_1uqTm-FjI0WTGtfIWNApNJiPGtpWOzmQNnrMBTuYEmZu-khW8DUex-tFQjwxLlxQ3cEQiTa5LvWVpbiTKzsZ-BdbzmfFZKEVtw6RIcD6wDBvN0LFn-syb7Y1TFkcPAuUe2vJbhsWGe7O7dC2;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Content-Length:
+      - '1189'
+    body:
+      encoding: ASCII-8BIT
+      string: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\"
+        />\n  <title>404 Error</title>\n</head>\n<body>\n\n<style>\nhtml, body {\n
+        \ height: 100%;\n}\nbody {\n  margin: auto;\n  width: 1008px;\n  background-color:
+        #D4D9DD;\n  font-family: Verdana, Arial, sans-serif;\n}\na {\n  text-decoration:
+        none;\n}\na:hover {\n  text-decoration: underline;\n}\na:link, a:hover, a:visited
+        {\n  color: #136CB2;\n}\na:active {\n  color: #E7BE00;\n}\n#error {\n  height:
+        100%;\n  background-color: white;\n  border-left: 1px solid #999999;\n  border-right:
+        1px solid #999999;\n  box-shadow: 0 0 5px 5px #C5CACD;\n}\n.error_message
+        {\n  color: #999999;\n  font-size: 17.5px;\n  padding: 30px 70px 20px;\n}\n.error_bubble
+        {\n  font-family: Arial, helvetica, sans-serif;\n  font-weight: bold;\n  border-radius:
+        8px;\n  -moz-border-radius: 8px;\n  margin: 0 70px 0 70px;\n  padding: 50px;\n}\n.error_bubble
+        div {\n  display: inline-block;\n  vertical-align: middle;\n}\n.error_quote
+        {\n  color: #FFFFFF;\n  font-size: 30px;\n  line-height: 1.35em;\n  padding-left:
+        50px;\n  width: 500px;\n}\n.error_code {\n  font-size: 100px;\n  line-height:
+        50px;\n  margin-top:8px\n}\n.error_arrow {\n  border-color: #DECA16 transparent
+        transparent transparent;\n  border-style: solid;\n  border-width: 21px 0px
+        0px 32px;\n  height: 0;\n  left: 700px;\n  line-height: 0;\n  position: relative;\n
+        \ top: -1px;\n  width: 0;\n}\n.error_code > span {\n  font-size: 50px;\n}\n.error_attrib
+        {\n  color: #999999;\n  float: right;\n  font-size: 14px;\n  font-style: italic;\n
+        \ padding: 10px 70px 36px;\n}\n.error_code_404 .error_bubble {\n  background:
+        none repeat scroll 0% 0% #DECA16;\n  border: 1px solid #DECA16;\n}\n.error_code_500
+        .error_bubble {\n  background: none repeat scroll 0% 0% #EDCA24;\n  border:
+        1px solid #EDCA24;\n}\n.error_code_404 .error_code {\n  color: #BFAD13;\n}\n.error_code_500
+        .error_code {\n  color: #CCAD1F;\n}\n.error_code_500 .error_arrow {\n  border-color:
+        #EDCA24 transparent transparent transparent;\n}\na.btn {\n  background-repeat:
+        repeat-x; \n  background-color: #ECE2C6;\n  background-image: linear-gradient(rgba(255,255,255,.8)
+        5%, rgba(255,255,255,0.0) 70%, rgba(255,255,255,0.8) 100%); \n  background-image:
+        -moz-linear-gradient(rgba(255,255,255,.8) 5%, rgba(255,255,255,0.0) 70%, rgba(255,255,255,0.8)
+        100%); \n  background-image: -webkit-linear-gradient(rgba(255,255,255,.8)
+        5%, rgba(255,255,255,0.0) 70%, rgba(255,255,255,0.8) 100%); \n  background-image:
+        -ms-linear-gradient(rgba(255,255,255,.8) 5%, rgba(255,255,255,0.0) 70%, rgba(255,255,255,0.8)
+        100%); \n  border-color: #E0E0E0 #C0C0C0 #C0C0C0 #E0E0E0;\n  border-radius:
+        3px 3px 3px 3px;\n  border-style: solid;\n  border-width: 1px;\n  color: #000000;\n
+        \ cursor: pointer;\n  float: right;\n  margin-right: 70px;\n  margin-top:
+        26px;\n  padding: 0.3em 0.6em;\n  text-decoration: none;\n}\na.btn:hover {\n
+        \ background-image: none;\n  border-color: #E6B800;\n}\n.clear {\n  clear:
+        both;\n}\n</style>\n<div id=\"error\" class=\"error_code_404\">\n    <div
+        class=\"error_message\">\n        The requested URL was not found on our server.
+        <a href=\"/\">Go to the IMDb homepage</a> &raquo;\n    </div>\n    <div class=\"error_bubble\">\n
+        \       <div class=\"error_code\">404<br><span>ERROR</span></div>\n        <div
+        class=\"error_quote\">What's on the page?!</div>\n    </div>\n    <div class=\"error_arrow\"></div>\n
+        \   <div class=\"error_attrib\">        <span>Detective David Mills, </span>
+        \       <a href=\"/title/tt0114369/\">Se7en (1995)</a>\n    </div>\n    <div
+        class=\"clear\"></div>\n</div>\n\n\n\n</body>\n</html>\n"
+    http_version: 
+  recorded_at: Fri, 23 Dec 2016 10:28:53 GMT
 recorded_with: VCR 3.0.3

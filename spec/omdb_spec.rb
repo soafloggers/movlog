@@ -9,7 +9,7 @@ describe 'OMDB specifications' do
 
   before do
     VCR.insert_cassette CASSETTE_FILE_1, record: :new_episodes
-    @movie = Movlog::Movie.find(t: OMDB_KEYWORD)
+    @movies = Movlog::Movies.find(s: OMDB_KEYWORD)
   end
 
   after do
@@ -17,15 +17,11 @@ describe 'OMDB specifications' do
   end
 
   it 'should get the data of a movie' do
-    @movie.imdb_id.length.must_be :>, 0
-    @movie.title.length.must_be :>, 0
-    @movie.year.length.must_be :>, 0
-    @movie.actors.length.must_be :>, 0
-    @movie.poster.length.must_be :>, 0
-    @movie.plot.length.must_be :>, 0
+    @movies.movies.length.must_be :>, 0
+    @movies.num.to_i.must_be :>, 0
   end
 
   it 'should get the filming location of a movie' do
-    @movie.get_location.length.must_be :>, 0
+    @movies.movies.first.get_location.length.must_be :>, 0
   end
 end
