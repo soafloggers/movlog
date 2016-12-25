@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    movlog (0.3.2)
+    movlog (0.3.4)
       http (~> 2.0)
       nokogiri (~> 1.6, >= 1.6.8.1)
 

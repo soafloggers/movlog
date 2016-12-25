@@ -29,7 +29,7 @@ module Movlog
     end
 
     def get_details
-      movie_details = OmdbApi.movie_info(t)
+      movie_details = OmdbApi.movie_info(@title)
       parse_details(details: movie_details)
     end
 
