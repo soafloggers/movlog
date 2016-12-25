@@ -45,7 +45,7 @@ module Movlog
       doc = Nokogiri::HTML(open(page_url))
       doc.search('//div[@class="soda sodavote odd"]/dt/a').each { |link| location_arr << link.content}
       doc.search('//div[@class="soda sodavote even"]/dt/a').each { |link| location_arr <<  link.content}
-      location_arr.to_json
+      JSON.parse(location_arr.to_json)
     end
   end
 end
