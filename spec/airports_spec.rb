@@ -18,8 +18,9 @@ describe 'Airports specifications' do
   end
 
   it 'should get airport by geocoord from Geonames' do
-    airport_info = Airports::AirportInfo.find('Canterbury, New Zealand')
+    airport_info = Airports::AirportInfo.find('Taiwan')
     airports = airport_info.airports
+    puts airport_info.airports.to_json
     airports.length.must_be :>, 0
   end
 end

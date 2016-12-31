@@ -22,7 +22,7 @@ module Airports
 
     def airports
       return @airports if @airports
-      @airports = load_airport(GeonamesApi.near_airports(lat: @lat, lng: @lng))
+      load_airports(GeonamesApi.near_airports(lat: @lat, lng: @lng))
     end
 
     private
@@ -33,15 +33,33 @@ module Airports
       @lng = data['lng'].to_f
     end
 
-    def load_airport(airports)
-      airports.map do |ap|
+    def load_airports(airports)
+      @airports = airports.map do |ap|
         if ap['name'].include? 'Air'
-          {
-            name: ap['name'], country_code: ap['countryCode'],
-            lat: ap['lat'].to_f, lng: ap['lng'].to_f
-          }
+          airport_hash(ap)
         end
       end.compact
+      @airports = sort_airports
+    end
+
+    def sort_airports
+      inter = []
+      nomal = []
+      @airports.each do |ap|
+        if ap[:name].include? 'International'
+          inter << ap
+        elsif nomal.length < 5
+          nomal << ap
+        end
+      end
+      sorted_airports = inter + nomal
+    end
+
+    def airport_hash(ap)
+      {
+        name: ap['name'], country_code: ap['countryCode'],
+        lat: ap['lat'].to_f, lng: ap['lng'].to_f
+      }
     end
   end
 end

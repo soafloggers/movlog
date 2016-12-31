@@ -237,4 +237,233 @@ http_interactions:
         Zealand","fcodeName":"airport","adminName1":"Canterbury","lat":"-43.58832","fcode":"AIRP"}]}'
     http_version: 
   recorded_at: Sat, 31 Dec 2016 08:21:03 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Taiwan&key=<GOOGLEMAP_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sat, 31 Dec 2016 16:59:15 GMT
+      Expires:
+      - Sun, 01 Jan 2017 16:59:15 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="35,34"
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Language,Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Taiwan",
+                       "short_name" : "TW",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Taiwan",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 26.4545,
+                          "lng" : 123.5021012
+                       },
+                       "southwest" : {
+                          "lat" : 20.5170001,
+                          "lng" : 116.6665
+                       }
+                    },
+                    "location" : {
+                       "lat" : 23.69781,
+                       "lng" : 120.960515
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 25.2996538,
+                          "lng" : 122.0066942
+                       },
+                       "southwest" : {
+                          "lat" : 21.8968211,
+                          "lng" : 120.0350435
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJL1cHXAbzbjQRaVScvwTwEec",
+                 "types" : [ "country", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Sat, 31 Dec 2016 16:59:15 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/findNearbyJSON?fcode=AIRP&lat=23.69781&lng=120.960515&maxRows=10&radius=200&username=<GEONAMES_USERNAME>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.geonames.org
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 31 Dec 2016 16:59:16 GMT
+      Server:
+      - Apache
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json;charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"geonames":[{"adminCode1":"04","lng":"120.6558","distance":"62.02683","geonameId":8521367,"toponymName":"Shuinan
+        Airport","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Shuinan
+        Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"24.18278","fcode":"AIRP"},{"adminCode1":"04","lng":"120.39283","distance":"63.57216","geonameId":6300295,"toponymName":"Chiayi
+        Airport","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Chiayi
+        Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"23.46178","fcode":"AIRP"},{"adminCode1":"04","lng":"120.62694","distance":"71.16248","geonameId":6587703,"toponymName":"Taichung
+        Airport","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Taichung
+        Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"24.2625","fcode":"AIRP"},{"adminCode1":"04","lng":"121.58942","distance":"73.72661","geonameId":6643073,"toponymName":"Jiashan
+        Jichang","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Jiashan
+        Jichang","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"24.02733","fcode":"AIRP"},{"adminCode1":"04","lng":"121.61691","distance":"75.98234","geonameId":6300306,"toponymName":"Hualien
+        Airport","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Hualien
+        Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"24.02372","fcode":"AIRP"},{"adminCode1":"04","lng":"121.18197","distance":"102.72362","geonameId":6301823,"toponymName":"Chihhang
+        Tw-Afb","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Chihhang
+        Tw-Afb","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"22.79312","fcode":"AIRP"},{"adminCode1":"04","lng":"121.10168","distance":"105.41","geonameId":6300293,"toponymName":"Feng
+        Nin Tw-Afb","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Feng
+        Nin Tw-Afb","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"22.75499","fcode":"AIRP"},{"adminCode1":"04","lng":"120.20578","distance":"113.18456","geonameId":6300301,"toponymName":"Tainan
+        Airport","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Tainan
+        Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"22.95036","fcode":"AIRP"},{"adminCode1":"04","lng":"120.482","distance":"120.85079","geonameId":6301824,"toponymName":"Pingtung
+        North Air Force Base","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Pingtung
+        North Air Force Base","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"22.70024","fcode":"AIRP"},{"adminCode1":"02","lng":"120.26257","distance":"124.00221","geonameId":6300289,"toponymName":"Kangshan
+        Tw-Afb","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Kangshan
+        Tw-Afb","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Kaohsiung","lat":"22.78253","fcode":"AIRP"}]}'
+    http_version: 
+  recorded_at: Sat, 31 Dec 2016 16:59:16 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/findNearbyJSON?fcode=AIRP&lat=23.69781&lng=120.960515&maxRows=50&radius=200&username=<GEONAMES_USERNAME>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.geonames.org
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 31 Dec 2016 17:13:17 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '7540'
+      Connection:
+      - close
+      Content-Type:
+      - application/json;charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"geonames":[{"adminCode1":"04","lng":"120.6558","distance":"62.02683","geonameId":8521367,"toponymName":"Shuinan
+        Airport","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Shuinan
+        Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"24.18278","fcode":"AIRP"},{"adminCode1":"04","lng":"120.39283","distance":"63.57216","geonameId":6300295,"toponymName":"Chiayi
+        Airport","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Chiayi
+        Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"23.46178","fcode":"AIRP"},{"adminCode1":"04","lng":"120.62694","distance":"71.16248","geonameId":6587703,"toponymName":"Taichung
+        Airport","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Taichung
+        Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"24.2625","fcode":"AIRP"},{"adminCode1":"04","lng":"121.58942","distance":"73.72661","geonameId":6643073,"toponymName":"Jiashan
+        Jichang","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Jiashan
+        Jichang","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"24.02733","fcode":"AIRP"},{"adminCode1":"04","lng":"121.61691","distance":"75.98234","geonameId":6300306,"toponymName":"Hualien
+        Airport","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Hualien
+        Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"24.02372","fcode":"AIRP"},{"adminCode1":"04","lng":"121.18197","distance":"102.72362","geonameId":6301823,"toponymName":"Chihhang
+        Tw-Afb","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Chihhang
+        Tw-Afb","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"22.79312","fcode":"AIRP"},{"adminCode1":"04","lng":"121.10168","distance":"105.41","geonameId":6300293,"toponymName":"Feng
+        Nin Tw-Afb","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Feng
+        Nin Tw-Afb","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"22.75499","fcode":"AIRP"},{"adminCode1":"04","lng":"120.20578","distance":"113.18456","geonameId":6300301,"toponymName":"Tainan
+        Airport","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Tainan
+        Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"22.95036","fcode":"AIRP"},{"adminCode1":"04","lng":"120.482","distance":"120.85079","geonameId":6301824,"toponymName":"Pingtung
+        North Air Force Base","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Pingtung
+        North Air Force Base","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"22.70024","fcode":"AIRP"},{"adminCode1":"02","lng":"120.26257","distance":"124.00221","geonameId":6300289,"toponymName":"Kangshan
+        Tw-Afb","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Kangshan
+        Tw-Afb","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Kaohsiung","lat":"22.78253","fcode":"AIRP"},{"adminCode1":"04","lng":"120.93939","distance":"124.09666","geonameId":6300303,"toponymName":"Hsinchu
+        Tw-Afb","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Hsinchu
+        Tw-Afb","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"24.81803","fcode":"AIRP"},{"adminCode1":"04","lng":"120.46173","distance":"124.5174","geonameId":6300291,"toponymName":"Pingtung
+        South Air Force Base","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Pingtung
+        South Air Force Base","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"22.67237","fcode":"AIRP"},{"adminCode1":"04","lng":"121.46639","distance":"124.77527","geonameId":6600376,"toponymName":"Lyudao
+        (Green Island) Airport","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Lyudao
+        Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"22.67278","fcode":"AIRP"},{"adminCode1":"04","lng":"120.94111","distance":"124.80382","geonameId":6600395,"toponymName":"Xinzhu
+        Jichang","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Xinzhu
+        Jichang","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"24.82444","fcode":"AIRP"},{"adminCode1":"04","lng":"119.62831","distance":"136.68536","geonameId":6300304,"toponymName":"Magong
+        Airport","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Magong
+        Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"23.56867","fcode":"AIRP"},{"adminCode1":"02","lng":"120.35001","distance":"138.97464","geonameId":6301820,"toponymName":"Kaohsiung
+        International Airport","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Kao-hsiung
+        International Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Kaohsiung","lat":"22.57709","fcode":"AIRP"},{"adminCode1":"04","lng":"119.50389","distance":"153.12383","geonameId":6587072,"toponymName":"Wang-an
+        Airport","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Wang-an
+        Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"23.36944","fcode":"AIRP"},{"adminCode1":"04","lng":"121.23282","distance":"155.32144","geonameId":1980018,"toponymName":"Taiwan
+        Taoyuan International Airport","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Taiwan
+        Taoyuan International Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"25.07773","fcode":"AIRP"},{"adminCode1":"04","lng":"121.55022","distance":"162.72546","geonameId":1980019,"toponymName":"Taipei
+        Songshan Airport","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Taipei
+        Songshan Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"25.06405","fcode":"AIRP"},{"adminCode1":"04","lng":"119.418","distance":"166.49701","geonameId":7668413,"toponymName":"Chi
+        Mei Airport","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Chi
+        Mei Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"23.2131","fcode":"AIRP"},{"adminCode1":"04","lng":"120.73021","distance":"184.98639","geonameId":6300296,"toponymName":"Hengchun
+        Airport","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Hengchun
+        Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"22.04107","fcode":"AIRP"},{"adminCode1":"04","lng":"121.53364","distance":"193.9573","geonameId":6300299,"toponymName":"Lan
+        Yu","countryId":"1668284","fcl":"S","population":0,"countryCode":"TW","name":"Lan-yü
+        Airport","fclName":"spot, building, farm","countryName":"Taiwan","fcodeName":"airport","adminName1":"Taiwan","lat":"22.02884","fcode":"AIRP"}]}'
+    http_version: 
+  recorded_at: Sat, 31 Dec 2016 17:13:24 GMT
 recorded_with: VCR 3.0.3

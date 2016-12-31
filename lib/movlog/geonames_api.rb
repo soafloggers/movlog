@@ -40,7 +40,7 @@ module Airports
           username: config[:username],
           fcode: 'AIRP',
           lat: lat, lng: lng,
-          radius: 50, maxRows: 10
+          radius: 200, maxRows: 50
         }
       )
       JSON.parse(findnearby_response.to_s)['geonames']

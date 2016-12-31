@@ -4,7 +4,7 @@ require 'http'
 module Skyscanner
   # Service for all SkyScanner API calls
   class SkyscannerApi
-    SKY_URL = 'http://partners.api.skyscanner.net/apiservices/browseroutes/'
+    SKY_URL = 'http://partners.api.skyscanner.net/apiservices/browsedates/'
     API_VER = 'v1.0'
     SKY_API_URL = URI.join(SKY_URL, "#{API_VER}/")
 
