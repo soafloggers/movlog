@@ -40,12 +40,17 @@ module Movlog
     end
 
     def self.location(movie_id)
-      page_url = "http://www.imdb.com/title/#{movie_id}/locations?ref_=tt_dt_dt"
       location_arr = []
-      doc = Nokogiri::HTML(open(page_url))
-      doc.search('//div[@class="soda sodavote odd"]/dt/a').each { |link| location_arr << link.content}
-      doc.search('//div[@class="soda sodavote even"]/dt/a').each { |link| location_arr <<  link.content}
+      doc = Nokogiri::HTML(open(location_url(movie_id)))
+      doc.search('//div[@class="soda sodavote odd"]/dt/a').each { |link| location_arr << link.content.gsub(/\n/, '') }
+      doc.search('//div[@class="soda sodavote even"]/dt/a').each { |link| location_arr <<  link.content.gsub(/\n/, '') }
       JSON.parse(location_arr.to_json)
+    end
+
+    private_class_method
+
+    def self.location_url(imdb_id)
+       "http://www.imdb.com/title/#{imdb_id}/locations?ref_=tt_dt_dt"
     end
   end
 end

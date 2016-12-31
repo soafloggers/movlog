@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Geonames
+module Airports
   # airport
   class AirportInfo
     attr_reader :location
@@ -9,13 +9,13 @@ module Geonames
 
     def initialize(data)
       @location = data[:location]
-      load_geocoord(data[:geocoord])
+      load_geocode(data[:geocode])
     end
 
     def self.find(location)
       data = {
         location: location,
-        geocoord: GeonamesApi.geo_info(location)
+        geocode: GoogleMapApi.geocode(location)
       }
       new(data)
     end
@@ -27,18 +27,21 @@ module Geonames
 
     private
 
-    def load_geocoord(data)
+    def load_geocode(data)
+      data = data['geometry']['location']
       @lat = data['lat'].to_f
       @lng = data['lng'].to_f
     end
 
     def load_airport(airports)
       airports.map do |ap|
-        {
-          name: ap['name'], countryCode: ap['countryCode'],
-          lat: ap['lat'].to_f, lng: ap['lng'].to_f
-        }
-      end
+        if ap['name'].include? 'Air'
+          {
+            name: ap['name'], country_code: ap['countryCode'],
+            lat: ap['lat'].to_f, lng: ap['lng'].to_f
+          }
+        end
+      end.compact
     end
   end
 end

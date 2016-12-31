@@ -19,14 +19,16 @@ module Skyscanner
       }
       new(data)
     end
+
+    def to_hash
+      { meta: @meta.to_hash, flights: @flights.to_hash }
+    end
   end
+
   # Flight info
   class Flight
-    attr_reader :min_price
-    attr_reader :direct
-    attr_reader :carriers
+    attr_reader :carriers, :min_price, :direct, :date
     attr_reader :origin, :destination
-    attr_reader :date
 
     def initialize(data)
       @min_price = data[:min_price]
@@ -36,7 +38,15 @@ module Skyscanner
       @destination = data[:destination]
       @date = data[:date]
     end
+
+    def to_hash
+      { min_price: @min_price, direct: @direct, carriers: @carriers,
+        origin: @origin.to_hash, destination: @destination.to_hash,
+        date: @date }
+    end
+
   end
+
   # Place info
   class Place
     attr_reader :name, :city_name, :country_name
@@ -51,6 +61,11 @@ module Skyscanner
 
     def self.find(data)
       new(data)
+    end
+
+    def to_hash
+      { name: @name, city_name: @city_name, country_name: @country_name,
+        type: @type }
     end
   end
 end

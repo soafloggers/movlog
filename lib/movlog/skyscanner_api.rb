@@ -30,7 +30,7 @@ module Skyscanner
       JSON.parse(skyscanner_routes_response.to_s)
     end
 
-    private
+    private_class_method
 
     def self.route_info_url(data)
       URI.join(

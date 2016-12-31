@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    movlog (0.3.5)
+    movlog (0.4.0)
       http (~> 2.0)
       nokogiri (~> 1.6, >= 1.6.8.1)
 
@@ -41,7 +41,7 @@ GEM
     minitest (5.10.1)
     minitest-rg (5.2.0)
       minitest (~> 5.0)
-    nokogiri (1.6.8.1)
+    nokogiri (1.7.0)
       mini_portile2 (~> 2.1.0)
     parser (2.3.3.1)
       ast (~> 2.2)

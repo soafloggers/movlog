@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'http'
 
-module Geonames
+module Airports
   # Service for transformation of location and find near airport
   class GeonamesApi
     GEONAMES_URL = 'http://api.geonames.org'

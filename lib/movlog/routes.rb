@@ -63,6 +63,7 @@ module Skyscanner
       carrier_ids.map { |cid| @carriers[cid] }
     end
   end
+
   # Query parameters
   class RouteMeta
     attr_reader :market, :currency, :locale
@@ -73,6 +74,12 @@ module Skyscanner
       load_env_data(data['market'], data['currency'], data['locale'])
       load_place(data['origin'], data['destination'])
       load_date(data['outbound'], data['inbound'])
+    end
+
+    def to_hash
+      { market: @market, currency: @currency, locale: @locale,
+        origin: @origin, destination: @destination,
+        outbound: @outbound, inbound: @inbound }
     end
 
     private

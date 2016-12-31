@@ -4,8 +4,8 @@ require_relative 'omdb_api'
 module Movlog
   # Movie info
   class Movie
-    attr_reader :imdb_id, :type, :title, :year, :poster
-    attr_reader :rating, :plot, :runtime
+    attr_reader :imdb_id, :type, :title, :year, :released, :poster
+    attr_reader :rating, :plot, :runtime, :genre
     attr_reader :awards, :director, :actors
     attr_reader :country, :language
     attr_reader :response
@@ -42,6 +42,8 @@ module Movlog
       @actors = details['Actors']
       @country = details['Country']
       @language = details['Language']
+      @released = details['Released']
+      @genre = details['Genre']
     end
   end
 end

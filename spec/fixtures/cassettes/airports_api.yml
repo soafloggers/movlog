@@ -1,0 +1,240 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Hsinchu&key=<GOOGLEMAP_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sat, 31 Dec 2016 08:21:01 GMT
+      Expires:
+      - Sun, 01 Jan 2017 08:21:01 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="35,34"
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Language,Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Hsinchu City",
+                       "short_name" : "Hsinchu City",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Taiwan",
+                       "short_name" : "TW",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "300",
+                       "short_name" : "300",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "Hsinchu City, Taiwan 300",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 24.8569956,
+                          "lng" : 121.0335449
+                       },
+                       "southwest" : {
+                          "lat" : 24.7125478,
+                          "lng" : 120.8785096
+                       }
+                    },
+                    "location" : {
+                       "lat" : 24.8138297,
+                       "lng" : 120.9674752
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 24.8569956,
+                          "lng" : 121.0335449
+                       },
+                       "southwest" : {
+                          "lat" : 24.7125478,
+                          "lng" : 120.8794077
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ9-datXdKaDQR-x-h4mLoTF4",
+                 "types" : [ "administrative_area_level_2", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Sat, 31 Dec 2016 08:21:01 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Canterbury,%20New%20Zealand&key=<GOOGLEMAP_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sat, 31 Dec 2016 08:21:01 GMT
+      Expires:
+      - Sun, 01 Jan 2017 08:21:01 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="35,34"
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Language,Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Canterbury",
+                       "short_name" : "Canterbury",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "New Zealand",
+                       "short_name" : "NZ",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Canterbury, New Zealand",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : -41.9073951,
+                          "lng" : 174.0956747
+                       },
+                       "southwest" : {
+                          "lat" : -44.9402681,
+                          "lng" : 169.8520438
+                       }
+                    },
+                    "location" : {
+                       "lat" : -43.7542275,
+                       "lng" : 171.1637245
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -41.9073951,
+                          "lng" : 174.0956079
+                       },
+                       "southwest" : {
+                          "lat" : -44.9402681,
+                          "lng" : 169.8520438
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJA9l1eDPYLW0RgeJpMTBkdzM",
+                 "types" : [ "administrative_area_level_1", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Sat, 31 Dec 2016 08:21:02 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/findNearbyJSON?fcode=AIRP&lat=-43.7542275&lng=171.1637245&maxRows=10&radius=50&username=<GEONAMES_USERNAME>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.geonames.org
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 31 Dec 2016 08:21:02 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) mod_jk/1.2.41 OpenSSL/1.0.1e-fips
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json;charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"geonames":[{"adminCode1":"E9","lng":"171.53011","distance":"34.82599","geonameId":6216856,"toponymName":"Mount
+        Hutt Methven Airfield","countryId":"2186224","fcl":"S","population":0,"countryCode":"NZ","name":"Mount
+        Hutt Methven Airfield","fclName":"spot, building, farm","countryName":"New
+        Zealand","fcodeName":"airport","adminName1":"Canterbury","lat":"-43.58832","fcode":"AIRP"}]}'
+    http_version: 
+  recorded_at: Sat, 31 Dec 2016 08:21:03 GMT
+recorded_with: VCR 3.0.3
